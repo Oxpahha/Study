@@ -12,7 +12,7 @@ Console.WriteLine(Sum(num));
 
 int Sum(string a)
 {
-    int leng = num.Length;
+    int leng = a.Length;
     int sum = 0;
     for (int i = 0; i < leng; i++)
     {
