@@ -16,6 +16,7 @@ int[] Swapper(int[] array, int arrayLength)
 {
     int lastIndex = arrayLength;
     int[] newArray = new int[(arrayLength / 2 + 1)];
+    
     for (int i = 0; i < arrayLength / 2; i++)
         newArray[i] = array[i] * array[lastIndex - 1 - i];
     if (newArray.Length % 2 != 0)
