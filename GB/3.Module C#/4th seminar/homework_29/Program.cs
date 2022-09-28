@@ -5,3 +5,34 @@
 // - Должна быть отдельная функция, которая создаёт массив и отдельная функция вывода
 // - Внутри функций (кроме функции вывода) НЕЛЬЗЯ использовать класс Console. 
 //   Только в основном блоке кода или в функции вывода
+
+// Console.WriteLine("Введите размер массива: ");
+// int arrayLength = int.Parse(Console.ReadLine() ?? "0");
+int arrayLength = 8;
+int[] array = new int[arrayLength];
+
+FillArray(array);
+PrintArray(array);
+
+void FillArray(int[] array)
+{
+    Random rand = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = rand.Next();
+    }
+}
+
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+    Console.Write("[");
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write(array[i]);
+        if (i == count - 1)
+            Console.WriteLine("]");
+        else
+            Console.Write(", ");
+    }
+}
