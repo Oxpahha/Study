@@ -30,5 +30,4 @@ void PrintArray(int[] array)
         else
             Console.Write(", ");
     }
-    Console.WriteLine();
 }

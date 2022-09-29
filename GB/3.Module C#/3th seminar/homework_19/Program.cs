@@ -10,9 +10,11 @@ int InputIntNumber()
         while (number > 9999 && number < 100000)
             return number;
     }
+    
 }
 
 int num = InputIntNumber();
+
 
 void Poli()
 {

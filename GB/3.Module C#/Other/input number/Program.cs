@@ -1,4 +1,4 @@
-﻿int InputIntNumber()
+﻿int InputIntNumber(int x)
 {
     while (true)
     {
@@ -8,3 +8,4 @@
             return number;
     }
 }
+

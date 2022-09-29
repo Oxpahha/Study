@@ -39,13 +39,13 @@ void FillArray(int[] array)
     Random rand = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rand.Next(int.MinValue, int.MaxValue);
+        array[i] = rand.Next(0, 10);
     }
 }
 
-void PrintArray(int[] array)
+void PrintArray(int[] x)
 {
-    int count = array.Length;
+    int count = x.Length;
     Console.Write("[");
     for (int i = 0; i < count; i++)
     {
