@@ -30,13 +30,13 @@ void Poli(string str)
 {
     int length = str.Length;
     int count = 0;
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < length && count != 0; i++)
     {
         if (str[i] != str[length -1 - i])
             count++;
     }
-    if (count == 0)
-            Console.Write("Число является палиндромом");
-        else
+    if (count > 0)
             Console.Write("Число не является палиндромом");
+        else
+            Console.Write("Число является палиндромом");
 }
