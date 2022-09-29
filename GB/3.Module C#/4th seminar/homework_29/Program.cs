@@ -19,14 +19,13 @@ PrintArray(array);
 void Sorting(int[] array)
 {
     int arLength = array.Length;
-    int temp = 0;
     for (int j = 0; j < arLength; j++)
     {
         for (int i = 0; i < arLength - 1; i++)
         {
             if (Math.Abs(array[i]) > Math.Abs(array[i + 1]))
             {
-                temp = array[i];
+                int temp = array[i];
                 array[i] = array[i + 1];
                 array[i + 1] = temp;
             }
