@@ -1,13 +1,6 @@
-﻿Console.Clear();
-
-Console.WriteLine("Введите размер массива: ");
-int arrayLength = int.Parse(Console.ReadLine() ?? "0");
+﻿int arrayLength = int.Parse(Console.ReadLine() ?? "0");
 
 int[] array = new int[arrayLength];
-
-FillArray(array);
-PrintArray(array);
-
 
 void FillArray(int[] array)
 {
@@ -18,16 +11,3 @@ void FillArray(int[] array)
     }
 }
 
-void PrintArray(int[] array)
-{
-    int count = array.Length;
-    Console.Write("[");
-    for (int i = 0; i < count; i++)
-    {
-        Console.Write(array[i]);
-        if (i == count - 1)
-            Console.WriteLine("]");
-        else
-            Console.Write(", ");
-    }
-}
