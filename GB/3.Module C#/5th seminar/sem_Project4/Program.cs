@@ -9,24 +9,11 @@ PrintArray(Swapper(arrayOne));
 int[] Swapper(int[] array)
 {
     int length = array.Length;
-
-    if (length % 2 == 0)
+    for (int i = 0; i < length / 2; i++)
     {
-        for (int i = 0; i < length && i < length/2 ; i++)
-        {
-            int temp = array[i];
-            array[i] = array[length - 1 - i];
-            array[length - 1 - i] = temp;
-        }
-    }
-    else if (length % 2 != 0)
-    {
-        for (int i = 0; i < length && i < length/2 + 1; i++)
-        {
-            int temp = array[i];
-            array[i] = array[length - 1 - i];
-            array[length - 1 - i] = temp;
-        }
+        int temp = array[i];
+        array[i] = array[length - 1 - i];
+        array[length - 1 - i] = temp;
     }
     return array;
 }
