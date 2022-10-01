@@ -33,7 +33,6 @@ void Sorting(int[] array)
     }
 }
 
-
 void FillArray(int[] array)
 {
     Random rand = new Random();

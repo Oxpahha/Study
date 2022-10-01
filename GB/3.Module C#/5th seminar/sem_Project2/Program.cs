@@ -55,12 +55,12 @@ bool LengthCheck(int[] firstArray, int[] secondArray)
 
 void PrintArray(int[] array)
 {
-    int count = array.Length;
+    int length = array.Length;
     Console.Write("[");
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < length; i++)
     {
         Console.Write(array[i]);
-        if (i == count - 1)
+        if (i == length - 1)
             Console.WriteLine("]");
         else
             Console.Write(", ");
