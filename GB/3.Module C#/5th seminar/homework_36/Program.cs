@@ -20,7 +20,7 @@ void FillArray(int[] array)
     int length = array.Length;
     for (int i = 0; i < length; i++)
     {
-        array[i] = rand.Next(0,100);
+        array[i] = rand.Next(0, 100);
     }
 }
 
@@ -30,8 +30,8 @@ int OddSum(int[] array)
     int length = array.Length;
     for (int i = 0; i < length; i++)
     {
-        if (array[i] %2 != 0)
-        sum = sum + array[i];
+        if (i % 2 != 0)
+            sum = sum + array[i];
     }
     return sum;
 }

@@ -3,7 +3,6 @@ int[] array = ParseToArray(input);
 
 int[] ParseToArray(string str)
 {
-    //str = str.Trim();
     string[] stringArray = str.Split(",");
     int[] result = new int[stringArray.Length];
     int length = stringArray.Length;
