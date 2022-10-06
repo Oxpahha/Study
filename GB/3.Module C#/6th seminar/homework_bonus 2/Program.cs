@@ -7,16 +7,16 @@
 Console.Clear();
 
 string list = "";
+//PrintArray(StringToIntArray(Filling(list)));
+Console.Write($"Cреднее значение введенных чисел: {Sum(StringToIntArray(Filling(list)), 0)}");
 
-Console.Write($"Cреднее значение введенных чисел: {Sum(StringToIntArray(Filling(list)), 0, 0)}");
-
-double Sum(int[] array, int i, double sum)
+double Sum(int[] array, int i, double sum = 0)
 {
     if (i < array.Length)
     {
         i++;
         
-        return sum = Sum(array, i, sum) + array[i-1] ;
+        return sum = Sum(array, i) + array[i-1] ;
     }
     return sum / array.Length;
 }
@@ -47,3 +47,16 @@ int[] StringToIntArray(string str)
     return array;
 }
 
+void PrintArray(int[] array)
+{
+    int count = array.Length;
+    Console.Write("[");
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write(array[i]);
+        if (i == count - 1)
+            Console.WriteLine("]");
+        else
+            Console.Write(", ");
+    }
+}
