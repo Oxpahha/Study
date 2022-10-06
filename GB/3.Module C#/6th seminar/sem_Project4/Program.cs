@@ -6,10 +6,6 @@ int[,] array = new int[InputIntNumber(),InputIntNumber()];
 FillArray(array);
 PrintArray(array);
 
-
-
-
-
 int InputIntNumber()
 {
     while (true)
