@@ -17,14 +17,12 @@ double Sum(int[] array, int i, double sum = 0)
     i++;
     sum = Sum(array, i, sum) + array[i - 1];
     double result = sum / array.Length;
-
     return result;
   }
 
   if (i < array.Length)
   {
     i++;
-
     return sum = Sum(array, i, sum) + array[i - 1];
   }
   return 0;

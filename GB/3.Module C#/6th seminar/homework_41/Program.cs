@@ -12,12 +12,9 @@ CountOfNumBiggerThenZero(array);
 
 int InputIntNumber()
 {
-    while (true)
-    {
         Console.Write("Ведите число: ");
         int number = int.Parse(Console.ReadLine() ?? "0");
         return number;
-    }
 }
 
 void EnterArray(int[] array, int i)
