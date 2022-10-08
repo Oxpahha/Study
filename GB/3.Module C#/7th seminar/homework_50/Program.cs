@@ -17,8 +17,8 @@ FindIndexInArray(array, rowNumber, columnNumber);
 
 void FindIndexInArray(double[,] matrixArray, int i, int j)
 {
-    if (i > matrixArray.GetLength(0) || j > matrixArray.GetLength(1)
-      ||i < matrixArray.GetLength(0) || j < matrixArray.GetLength(1))
+    if (i < 0 || i > matrixArray.GetLength(1) -1
+      ||j < 0 || j > matrixArray.GetLength(1) -1)
     {
         Console.Write("такого числа в массиве нет");
     }
@@ -40,7 +40,7 @@ void FillArray(double[,] matrixArray)
     {
         for (int j = 0; j < matrixArray.GetLength(1); j++)
         {
-            matrixArray[i, j] = Math.Round(Convert.ToDouble(rand.Next(-10, 10)) + rand.NextDouble(), 2);
+            matrixArray[i, j] = rand.Next(-10, 10);
         }
     }
 }
