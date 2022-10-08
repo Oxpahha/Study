@@ -17,7 +17,8 @@ FindIndexInArray(array, rowNumber, columnNumber);
 
 void FindIndexInArray(double[,] matrixArray, int i, int j)
 {
-    if (i > matrixArray.GetLength(0) || j > matrixArray.GetLength(1))
+    if (i > matrixArray.GetLength(0) || j > matrixArray.GetLength(1)
+      ||i < matrixArray.GetLength(0) || j < matrixArray.GetLength(1))
     {
         Console.Write("такого числа в массиве нет");
     }
