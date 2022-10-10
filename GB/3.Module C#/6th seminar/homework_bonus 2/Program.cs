@@ -6,9 +6,9 @@
 
 Console.Clear();
 
-string list = "";
+// string list = "";
 //PrintArray(StringToIntArray(Filling(list)));
-Console.Write($"Cреднее значение введенных чисел: {Sum(StringToIntArray(Filling(list)), 0)}");
+Console.Write($"Cреднее значение введенных чисел: {Sum(StringToIntArray(Filling()), 0)}");
 
 double Sum(int[] array, int i, double sum = 0)
 {
@@ -28,7 +28,7 @@ double Sum(int[] array, int i, double sum = 0)
   return 0;
 }
 
-string Filling(string number, string num = "")
+string Filling(string number = "", string num = "")
 {
     Console.Write("Введите число: ");
     num = Console.ReadLine() ?? "0";

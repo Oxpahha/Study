@@ -1,13 +1,13 @@
 ﻿void PrintArray(int[,] matrixArray)
 {
-    int rows = matrixArray.GetLength(0);
-    int columns = matrixArray.GetLength(1);
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < matrixArray.GetLength(0); i++) 
     {
-        for (int j = 0; j < columns; j++)
-        {
-            Console.Write($"{matrixArray[i, j]} ");
-        }
-        Console.WriteLine();
+        Console.Write("[ ");
+        for (int j = 0; j < matrixArray.GetLength(1); j++)
+    {
+        Console.Write(matrixArray[i, j] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
     }
 }

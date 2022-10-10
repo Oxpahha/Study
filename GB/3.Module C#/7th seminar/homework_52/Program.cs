@@ -50,14 +50,29 @@ void FillArray(int[,] matrixArray)
     }
 }
 
+// void PrintArray(int[,] matrixArray)
+// {
+//     for (int i = 0; i < matrixArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrixArray.GetLength(1); j++)
+//         {
+//             Console.Write($"{matrixArray[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
 void PrintArray(int[,] matrixArray)
 {
-    for (int i = 0; i < matrixArray.GetLength(0); i++)
+    for (int i = 0; i < matrixArray.GetLength(0); i++) 
     {
+        Console.Write("[ ");
         for (int j = 0; j < matrixArray.GetLength(1); j++)
-        {
-            Console.Write($"{matrixArray[i, j]} ");
-        }
-        Console.WriteLine();
+    {
+        Console.Write(matrixArray[i, j] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
     }
 }
+

@@ -11,12 +11,12 @@ int[] array = new int[arrayLength];
 
 FillArray(array);
 PrintArray(array);
-Console.WriteLine(NumCounter(array, arrayLength));
+Console.WriteLine(NumCounter(array));
 
-int NumCounter(int[] array, int arrayLength)
+int NumCounter(int[] array)
 {
     int count = 0;
-    for (int i = 0; i < arrayLength; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         if (array[i] >= 10 && array[i] <= 99)
         {
