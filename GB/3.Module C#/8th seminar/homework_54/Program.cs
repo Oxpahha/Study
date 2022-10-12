@@ -19,49 +19,67 @@ int[,] array = new int[m, n];
 FillArray(array);
 PrintArray(array);
 
+// SortMatrixArrayWithRow(array);
 SortMatrixArray(array);
 Console.WriteLine();
 PrintArray(array);
-
 
 void SortMatrixArray(int[,] matrixArray)
 {
     for (int i = 0; i < matrixArray.GetLength(0); i++)
     {
-        int[] array = new int[matrixArray.GetLength(0)];
-        int k = 0;
         for (int j = 0; j < matrixArray.GetLength(1); j++)
         {
-            array[k] = matrixArray[i, j];
-            k++;
-            if (j == matrixArray.GetLength(1) - 1)
+            for (int k = 0; k < matrixArray.GetLength(1) - 1; k++)
             {
-                for (int l = 0; l < array.Length; l++)
+                if (matrixArray[i, k] < matrixArray[i, k + 1])
                 {
-                    for (int m = l + 1; m < array.Length; m++)
-                    {
-                        if (array[l] < array[m])
-                        {
-                            int t = array[l];
-                            array[l] = array[m];
-                            array[m] = t;
-                        }
-                    }
-                }
-
-                for (int y = 0; y < matrixArray.GetLength(1); y++)
-                {
-                    int b = 0;
-                    for (int e = 0; e < matrixArray.GetLength(1); e++)
-                    {
-                        matrixArray[i, e] = array[b];
-                        b++;
-                    }
+                    int temp = matrixArray[i, k + 1];
+                    matrixArray[i, k + 1] = matrixArray[i, k];
+                    matrixArray[i, k] = temp;
                 }
             }
         }
     }
 }
+
+// void SortMatrixArrayWithRow(int[,] matrixArray)
+// {
+//     for (int i = 0; i < matrixArray.GetLength(0); i++)
+//     {
+//         int[] array = new int[matrixArray.GetLength(0)];
+//         int k = 0;
+//         for (int j = 0; j < matrixArray.GetLength(1); j++)
+//         {
+//             array[k] = matrixArray[i, j];
+//             k++;
+//             if (j == matrixArray.GetLength(1) - 1)
+//             {
+//                 for (int l = 0; l < array.Length; l++)
+//                 {
+//                     for (int m = l + 1; m < array.Length; m++)
+//                     {
+//                         if (array[l] < array[m])
+//                         {
+//                             int t = array[l];
+//                             array[l] = array[m];
+//                             array[m] = t;
+//                         }
+//                     }
+//                 }
+//                 for (int y = 0; y < matrixArray.GetLength(1); y++)
+//                 {
+//                     int b = 0;
+//                     for (int e = 0; e < matrixArray.GetLength(1); e++)
+//                     {
+//                         matrixArray[i, e] = array[b];
+//                         b++;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 void FillArray(int[,] matrixArray)
 {
