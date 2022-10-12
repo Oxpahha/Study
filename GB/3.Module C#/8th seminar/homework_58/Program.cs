@@ -31,10 +31,12 @@ else
     PrintArray(secondArray);
     Console.WriteLine();
 
-    if (m > a)
+    if (m >= a)
         PrintArray(MatrixMult(firstArray, secondArray));
     else
-        PrintArray(MatrixMult(secondArray,firstArray));
+        PrintArray(MatrixMult(secondArray,firstArray)); // проверка на дурака, когда вписал не "как надо"
+                                                        // где у первой матрицы больше столбов, 
+                                                        // а у второй строк. А наоборот.
 }
 
 int[,] MatrixMult(int[,] matrixArrayOne, int[,] matrixArrayTwo)
