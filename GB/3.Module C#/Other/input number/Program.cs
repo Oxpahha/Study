@@ -1,11 +1,10 @@
-﻿int InputIntNumber(int x)
+﻿int InputIntNumber()
 {
     while (true)
     {
-        Console.Write("Ведите пятизначное число: ");
+        Console.Write("Ведите число N больше двух: ");
         int number = int.Parse(Console.ReadLine() ?? "0");
-        while (number > 9999 && number < 100000)
+        while (number > 2)
             return number;
     }
 }
-
