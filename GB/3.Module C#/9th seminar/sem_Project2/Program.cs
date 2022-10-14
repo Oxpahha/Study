@@ -27,3 +27,18 @@ int InputIntNumber()
     int number = int.Parse(Console.ReadLine() ?? "0");
     return number;
 }
+
+
+// string[] letters = new string[] { "а", "и", "с", "в" };
+// int n = int.Parse(Console.ReadLine()!);
+// PrintAllWords(letters, n);
+// void PrintAllWords(string[] alphabet, int length, string prefix = "")
+// {
+//     if (length == 0)
+//         Console.WriteLine(prefix);
+//     else
+//         for (int i = 0; i < letters.Length; i++)
+//         {
+//             PrintAllWords(alphabet, length - 1, prefix + letters[i]);
+//         }
+// }
