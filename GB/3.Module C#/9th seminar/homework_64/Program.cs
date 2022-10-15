@@ -13,8 +13,10 @@ Console.WriteLine(RecPrintToOne(n));
 
 string RecPrintToOne(int numN)
 {
-    if (1 <= numN) return $"{numN} " + RecPrintToOne(numN - 1);
-    else return String.Empty;
+    if (1 <= numN)
+        return $"{numN} " + RecPrintToOne(numN - 1);
+    else
+        return String.Empty;
 }
 
 int InputIntNumber()
