@@ -1,4 +1,4 @@
-﻿int MatrixToRow()
+﻿int[] MatrixToRow(int[,] matrixArray)
 {
 int[] array = new int[matrixArray.GetLength(0) * matrixArray.GetLength(1)];
 int k = 0;
