@@ -99,8 +99,8 @@ driver.find_element(By.XPATH, "//button[contains(.,\'Отправить\')]").cl
 driver.get("https://adminqa.neapro.site/login")
 driver.set_window_size(873, 1080)
 time.sleep(1)
-#Login admin
-driver.find_element(By.XPATH, "//*[@id='admin_email']").send_keys("lostarkkisya@gmail.com")
+#Login
+driver.find_element(By.XPATH, "//*[@id='admin_email']").send_keys("moderat@neapro.ru")
 driver.find_element(By.XPATH, "//*[@id='admin_password']").send_keys("Aa123456")
 driver.find_element(By.XPATH, "//*[@id='admin_submit_action']/input").click()
 time.sleep(3)

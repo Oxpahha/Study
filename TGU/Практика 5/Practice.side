@@ -2,7 +2,7 @@
   "id": "bd9ec8e5-02b1-4469-9d9b-a73dda8696a6",
   "version": "2.0",
   "name": "First",
-  "url": "https://qa.neapro.site/login",
+  "url": "https://adminqa.neapro.site/login",
   "tests": [{
     "id": "3da9232b-61d6-4fe2-a4a0-add2a0256120",
     "name": "1.Login - Send docs",
@@ -1016,6 +1016,54 @@
     "id": "875d9b4b-b24b-4ca3-a064-89ae6ed46116",
     "name": "2. Accept docs",
     "commands": [{
+      "id": "d0fc1fe1-39c5-42a9-8d26-69c65ccc8ad4",
+      "comment": "",
+      "command": "open",
+      "target": "https://adminqa.neapro.site/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45c950c3-5beb-4ceb-be54-699cfe6b3dda",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='admin_email']",
+      "targets": [
+        ["id=admin_email", "id"],
+        ["name=admin[email]", "name"],
+        ["css=#admin_email", "css:finder"],
+        ["xpath=//input[@id='admin_email']", "xpath:attributes"],
+        ["xpath=//li[@id='admin_email_input']/input", "xpath:idRelative"],
+        ["xpath=//li/input", "xpath:position"]
+      ],
+      "value": "lostarkkisya@gmail.com"
+    }, {
+      "id": "eb19ce70-c693-46e1-bda7-a888e89417b4",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='admin_password']",
+      "targets": [
+        ["id=admin_password", "id"],
+        ["name=admin[password]", "name"],
+        ["css=#admin_password", "css:finder"],
+        ["xpath=//input[@id='admin_password']", "xpath:attributes"],
+        ["xpath=//li[@id='admin_password_input']/input", "xpath:idRelative"],
+        ["xpath=//li[2]/input", "xpath:position"]
+      ],
+      "value": "Aa123456"
+    }, {
+      "id": "cc9cfa5d-c39f-4ab7-88a2-02a89add5501",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@name='commit']",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=#admin_submit_action > input", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//li[@id='admin_submit_action']/input", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/ol/li/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
       "id": "17163299-6ba8-4412-a942-55e667149235",
       "comment": "",
       "command": "open",
@@ -1204,6 +1252,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://qa.neapro.site/login"],
+  "urls": ["https://qa.neapro.site/login", "https://adminqa.neapro.site/login"],
   "plugins": []
 }
