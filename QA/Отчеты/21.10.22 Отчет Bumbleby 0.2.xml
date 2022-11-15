@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<article lang="ru-RU">
+  <para/>
+  <para/>
+  <para>              </para>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para>
+    <inlinegraphic fileref="embedded:Изображение1" width="17.165cm" depth="9.653cm"/>
+  </para>
+  <para/>
+  <para/>
+  <para>Отчет о тестировании веб-платформы «Bumbleby»</para>
+  <para><anchor id="docs-internal-guid-f461122e-7fff-5128-15"/>Версия 0.2</para>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para> Заиченко Александр</para>
+  <para>Дата 21.10.22</para>
+  <para/>
+  <para>Оглавление</para>
+  <para/>
+  <para/>
+  <orderedlist>
+    <listitem>
+      <para>Оглавление </para>
+    </listitem>
+    <listitem>
+      <para>Информация о проекте </para>
+    </listitem>
+    <listitem>
+      <para>Команда тестировщиков</para>
+    </listitem>
+    <listitem>
+      <para>Описание процесса тестирования </para>
+    </listitem>
+    <listitem>
+      <para>Краткое описание</para>
+    </listitem>
+    <listitem>
+      <para>Расписание</para>
+    </listitem>
+    <listitem>
+      <para>Протокол проведения испытаний</para>
+    </listitem>
+    <listitem>
+      <para>Объект испытаний</para>
+    </listitem>
+    <listitem>
+      <para>Участники испытаний</para>
+    </listitem>
+    <listitem>
+      <para>Цель испытаний</para>
+    </listitem>
+    <listitem>
+      <para>Перечень функциональностей ТЗ, на соответствие которым проводились испытания </para>
+    </listitem>
+    <listitem>
+      <para>Тест-кейсы</para>
+    </listitem>
+    <listitem>
+      <para>Статистика по дефектам </para>
+    </listitem>
+    <listitem>
+      <para>Список новых дефектов</para>
+    </listitem>
+    <listitem>
+      <para>Список устраненных дефектов</para>
+    </listitem>
+    <listitem>
+      <para>Рекомендации</para>
+    </listitem>
+    <listitem>
+      <para>Заключение</para>
+    </listitem>
+    <listitem>
+      <para>Приложения</para>
+    </listitem>
+  </orderedlist>
+  <para>на 10 страницах</para>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <orderedlist>
+    <listitem/>
+  </orderedlist>
+  <sect1><title>Информация о проекте</title>Информация о проекте<para>Основная задача –  тестирование веб-платформы «Bumbleby». В данном отчете представлена информация про команду тестирования, сроки, а также статистика по найденным дефектам и составленной тестовой документации.</para><para/><orderedlist><listitem/></orderedlist></sect1>
+  <sect1><title><anchor id="docs-internal-guid-2d50db80-7fff-1f4a-19"/>Состав команды </title>Состав команды </sect1>
+  <sect1>
+    <title/>
+    <informaltable frame="all">
+      <tgroup cols="3"><colspec colnum="1" colname="c1"/><colspec colnum="2" colname="c2"/><colspec colnum="3" colname="c3"/><tbody><row><entry><para>ФИО</para></entry><entry><para>Должность</para></entry><entry><para>Функционал</para></entry></row><row><entry><para>Заиченко А.</para></entry><entry><para>Руководитель отдела тестирования </para></entry><entry><para>TeamLead, подготовка требований,составление тест плана, отчеты о тестировании</para></entry></row><row><entry><para>  Калинин М.</para><para/></entry><entry><para>ведущий специалист</para></entry><entry><para>Функциональное тестирование</para></entry></row><row><entry><para>  Килин А.</para><para/></entry><entry><para><anchor id="docs-internal-guid-666f5b8e-7fff-6190-5c"/>специалист по тестированию </para><para/></entry><entry><para>UI/UX</para></entry></row><row><entry><para> Царькова А.</para><para/></entry><entry><para><anchor id="docs-internal-guid-666f5b8e-7fff-6190-5c1"/>специалист по тестированию </para><para/></entry><entry><para><anchor id="docs-internal-guid-d6d78181-7fff-a6bb-71"/>Подготовка тест-кейсов, тестирование, оформление баг репортов </para><para/></entry></row></tbody></tgroup>
+    </informaltable>
+    <orderedlist>
+      <listitem/>
+    </orderedlist>
+  </sect1>
+  <sect1><title>Описание процесса тестирования</title>Описание процесса тестирования<para>Тестовое окружение, на котором проводилось тестирование:</para><orderedlist><listitem><para>Windows 10 x64 19044.1889: Chrome x64 105.0.5195.102, Mozilla FireFox 99.0.1</para></listitem><listitem><para>Android: Google Chrome, Mozilla FireFox</para></listitem></orderedlist><para>Версия приложения, на которой проводилось тестирование: qa.neapro.site</para><para/><para>Во время тестирования использовались следующие инструменты:</para><orderedlist><listitem><para>DevTools, </para></listitem><listitem><para>BugMagnet</para></listitem><listitem><para>Jira</para></listitem><listitem><para>Testrail</para></listitem></orderedlist><para/><para>Техническая документация, используемая при тестировании: <ulink url="https://docs.google.com/document/d/1cLsE-L4T7-8gn8mI_3YkhJ5KKPFgBdR5/edit?usp=sharing&amp;ouid=113384375577161760403&amp;rtpof=true&amp;sd=true">ТЗ</ulink></para><para>Тестовая документация, используемая на проекте: чек-листы, тест-кейсы.</para><para/><para><anchor id="docs-internal-guid-890c9b47-7fff-2410-36"/>Было проведено функциональное и нефункциональное тестирование, включая:</para><orderedlist><listitem><para>Тестирование требований</para></listitem><listitem><para>Тестирование безопасности</para></listitem><listitem><para>Тестирование интеграций</para></listitem><listitem><para>Тестирование производительности</para></listitem><listitem><para>Тестирование UI/UX</para></listitem><listitem><para>Тестирование Локализации </para></listitem></orderedlist><para/><para>В том числе, ручные: Smoke Тестирование, Black Box Тестирование, Sanity Тестирование.  </para><para/><para/><para>Часть функциональных тестов выполнена согласно тест-кейсам описанным в приложенном документе на странице “Тест-кейсы”</para><para/><para>Часть функциональных тестов выполнена по чек-листу описанному в приложенном документе на странице “Чек-листы”</para><para><ulink url="https://work83.testrail.io/index.php?/cases/add/1">dd Test Case</ulink></para><para/><orderedlist><listitem/></orderedlist></sect1>
+  <sect1><title>Краткое описание</title>Краткое описание<para>Версия qa.neapro.site содержит  32 дефекта, 4 из них критических, часть функционала недоступна для проверки.Техническая документация не полная.Нет отрисованного дизайнером макета веб-платформы.</para><para>  Не рекомендуется выпускать данную сборку в релиз. </para><para><anchor id="docs-internal-guid-9c008f6f-7fff-340a-61"/>  Требуется исправить критические дефекты.</para><para/><orderedlist><listitem/></orderedlist></sect1>
+  <sect1><title>Расписание</title>Расписание<para>Сроки проведения тестирования: 19.10.2022 – 21.10.2022</para><para/><informaltable frame="all"><tgroup cols="5"><tbody><row><entry><para>ФИО</para></entry><entry><para>Время на тестирование</para></entry><entry><para>Дата начала</para></entry><entry><para>Дата завершения</para></entry><entry><para>Ответственный</para></entry></row><row><entry><para>Калинин М.</para></entry><entry><para>15 часов</para></entry><entry><para>19.10.2022</para></entry><entry><para>21.10.2022</para></entry><entry><para>Заиченко А.</para></entry></row><row><entry><para>Царькова А.</para></entry><entry><para>15 часов</para></entry><entry><para>19.10.2022</para></entry><entry><para>20.10.2022</para></entry><entry><para>Заиченко А.</para></entry></row><row><entry><para>Килин А.</para></entry><entry><para>19 часов</para></entry><entry><para>19.10.2022</para></entry><entry><para>20.10.2022</para></entry><entry><para>Заиченко А.</para></entry></row><row><entry><para>Заиченко А.</para></entry><entry><para>17 часов</para></entry><entry><para>19.10.2022</para></entry><entry><para>21.10.2022</para></entry><entry><para>Заиченко А.</para></entry></row></tbody></tgroup></informaltable><orderedlist><listitem/></orderedlist><sect2><title>Лаборатория «На диване»</title>Лаборатория «На диване»<para/><para/><para/><para/><para/><para/><para/><para/><para/><para/><orderedlist><listitem/></orderedlist></sect2></sect1>
+  <sect1><title>«Bumbleby»</title>«Bumbleby»<para>Протокол проведения испытаний</para><para/><para/><para/><para/><para> Главный по тарелочкам</para><para> Заиченко А В</para><para>15.10.22</para><para>Сочи  2022</para><para/><orderedlist><listitem/></orderedlist></sect1>
+  <sect1><title><anchor id="docs-internal-guid-4d1dcab9-7fff-952d-6a"/>1.  Веб-платформа «Bumbleby»</title>1.  Веб-платформа «Bumbleby»<para><anchor id="docs-internal-guid-070bc684-7fff-f9f9-61"/>Настоящий протокол составлен по результатам проведения испытаний (тестирования) веб-платформы «Bumbleby» в соответствии с планом тестирования — <ulink url="https://docs.google.com/document/d/1cLsE-L4T7-8gn8mI_3YkhJ5KKPFgBdR5/edit?usp=sharing&amp;ouid=113384375577161760403&amp;rtpof=true&amp;sd=true">ТЗ</ulink>.</para><para/><para/><orderedlist><listitem/></orderedlist></sect1>
+  <sect1><title>2. Участники испытаний</title>2. Участники испытаний<para/><para/><informaltable frame="all"><tgroup cols="2"><tbody><row><entry><para>ФИО</para></entry><entry><para>Должность</para></entry></row><row><entry><para>Заиченко А.</para></entry><entry><para>Руководитель отдела тестирования программного обеспечения </para><para/></entry></row><row><entry><para>  Калинин М.</para><para/></entry><entry><para>ведущий специалист</para></entry></row><row><entry><para>  Килин А.</para><para/></entry><entry><para>специалист по тестированию </para><para/></entry></row><row><entry><para> Царькова А.</para><para/></entry><entry><para>специалист по тестированию </para><para/></entry></row></tbody></tgroup></informaltable><para/></sect1>
+  <sect1>
+    <title/>
+    <orderedlist>
+      <listitem/>
+    </orderedlist>
+  </sect1>
+  <sect1><title>3. Цель испытаний</title>3. Цель испытаний<para><anchor id="docs-internal-guid-1a36a22a-7fff-f11f-3b"/>Цель проведения испытаний – проверка программного комплекса на соответствие требований описанных в техническом задании</para><para/><orderedlist><listitem/></orderedlist></sect1>
+  <sect1><title>4. Перечень функциональностей ТЗ, на соответствие которым проводились испытания </title>4. Перечень функциональностей ТЗ, на соответствие которым проводились испытания <para/><para><anchor id="docs-internal-guid-61fabe78-7fff-bf6f-a4"/>Испытания проводились на соответствие Техническому заданию следующих функциональностей составленных в виде <ulink url="https://drive.google.com/file/d/1R4rBYGRl-MrrytV7Tvp48TQh_lAvRJyT/view?usp=sharing">майнд-карты</ulink>.</para><para/><para/><orderedlist><listitem/></orderedlist></sect1>
+  <sect1><title>5. <anchor id="docs-internal-guid-ff5ab859-7fff-bba4-0d"/>Тест-кейсы </title>5. Тест-кейсы <listitem><title>Тест-кейсы по которым проводились испытания представленны в приложенном документе с тестовой документацией на странице «Тест-кейсы».</title></listitem></sect1>
+  <sect1><title>Тест-кейсы по которым проводились испытания представленны в приложенном документе с тестовой документацией на странице «Тест-кейсы».</title>Тест-кейсы по которым проводились испытания представленны в приложенном документе с тестовой документацией на странице «Тест-кейсы».<para/><para/><para>6. Статистика по дефектам</para><para/><para>На момент написания отчета было задокментированно и оформленно 7 дефектов.</para><para/><para/><informaltable frame="all"><tgroup cols="4"><tbody><row><entry><para>№</para></entry><entry><para>Дефект</para></entry><entry><para>Приоритет</para></entry><entry><para>Статус</para></entry></row><row><entry><para>T28 </para></entry><entry><para>  Изменение номера телефона</para><para/></entry><entry><para>Medium</para></entry><entry><para>Open</para></entry></row><row><entry><para>T41 </para></entry><entry><para>  Работоспособность иконки глаза в поле Пароль</para><para/></entry><entry><para>Low</para><para/></entry><entry><para>Open</para></entry></row><row><entry><para>T165 </para></entry><entry><para>Загрузка исполняемого файла (.ехе) </para></entry><entry><para>Medium</para></entry><entry><para>Done</para></entry></row><row><entry><para>T164 </para></entry><entry><para>Загрузка "тяжелого" файла формата JPEG/JPG (более 3 Мб) </para></entry><entry><para>High</para></entry><entry><para>Done</para></entry></row><row><entry><para>  T166</para></entry><entry><para>  Удаление загруженных файлов </para></entry><entry><para>Medium</para></entry><entry><para>Open</para></entry></row><row><entry><para>  T173</para></entry><entry><para>  Отсутствие валидации поля «Кем выдан» </para></entry><entry><para>Low</para></entry><entry><para>Open</para></entry></row><row><entry><para> T207 </para><para/></entry><entry><para>  Загрузка вирусного файла </para><para/></entry><entry><para>High</para></entry><entry><para>Open</para></entry></row></tbody></tgroup></informaltable><para/><para/><para/><para/><para>7. Список новых дефектов</para><para/><para/><informaltable frame="all"><tgroup cols="4"><tbody><row><entry><para>№</para></entry><entry><para>Дефект</para></entry><entry><para>Приоритет</para></entry><entry><para>Статус</para></entry></row><row><entry><para>T165 </para></entry><entry><para>Загрузка исполняемого файла (.ехе) </para></entry><entry><para>Medium</para></entry><entry><para>Done</para></entry></row><row><entry><para>T164 </para></entry><entry><para>Загрузка "тяжелого" файла формата JPEG/JPG (более 3 Мб) </para></entry><entry><para>High</para></entry><entry><para>Done</para></entry></row><row><entry><para>  T166</para></entry><entry><para>  Удаление загруженных файлов </para></entry><entry><para>Medium</para></entry><entry><para>Open</para></entry></row><row><entry><para>  T173</para></entry><entry><para>  Отсутствие валидации поля «Кем выдан» </para></entry><entry><para>Low</para></entry><entry><para>Open</para></entry></row><row><entry><para> T207 </para><para/></entry><entry><para>  Загрузка вирусного файла </para><para/></entry><entry><para>Critical</para></entry><entry><para>Open</para></entry></row></tbody></tgroup></informaltable><para/><para/><para/><para/><para/><para/><para/><para/><para/><para>8. Список устраненных дефектов</para><para/><para/><para/><informaltable frame="all"><tgroup cols="4"><tbody><row><entry><para>№</para></entry><entry><para>Дефект</para></entry><entry><para>Приоритет</para></entry><entry><para>Статус</para></entry></row><row><entry><para>T165 </para></entry><entry><para>Загрузка исполняемого файла (.ехе) </para></entry><entry><para>Medium</para></entry><entry><para>Done</para></entry></row><row><entry><para>T164 </para></entry><entry><para>Загрузка "тяжелого" файла формата JPEG/JPG (более 3 Мб) </para></entry><entry><para>High</para></entry><entry><para>Done</para></entry></row></tbody></tgroup></informaltable><para/><para/><para>9. Рекомендации</para><para/><orderedlist><listitem><para>При смене номера телефона добавить подтверждение через смс для усиления безопасности.</para></listitem><listitem><para>Добавить возможность выхода из личного кабинета во время проверки загруженных документов.</para></listitem><listitem><para>Изменить поле «Адрес» в форме Паспорт на «Адрес регистрации».</para></listitem><listitem><para>Добавить возможность внести дополнительный номер теолефона.</para></listitem></orderedlist><para>10. Заключение</para><para/><para>В ходе проверки веб-платформы «Bumbleby» были написаны 257 тест-кейса.</para><para>В результате проверки было обнаружено 32 дефекта, из них 8 блокирующих функционал. </para><para>Имеются 4  критических дефекта. </para><para>На текущий момент, веб-платформа не может быть отдана в релиз. Необходимы уточнения ТЗ, правки основного функционала, проверки интеграции системы безопасности.</para><para>Для увеличения покрытия проверками нефункциальной части веб-платформы заказчику необходимо предоставить макеты дизайна веб-платформы. </para><para>В результате проведения тестирования:</para><para>80% set to Passed</para><para>11% set to Blocked</para><para>0% set to Retest</para><para>9% set to Failed</para><para/><para/></sect1>
+  <sect1><title>11. Приложения</title>11. Приложения<para><inlinegraphic fileref="embedded:Изображение3" width="17.71cm" depth="5.571cm"/></para><para>приложение 1 – результат прогона тестов</para><para/><para><inlinegraphic fileref="embedded:Изображение4" width="17.71cm" depth="4.55cm"/></para><para>приложение 2 – статистика по дефектам</para></sect1>
+</article>
