@@ -4,15 +4,13 @@
 #  78, 55, 36, 90, 2 -> 90
 
 nums = []
-count = 0
 for i in range(5):
     nums.append(int(input(f'Введите {i+1} число: ')))
 max_num = nums[0]
 for i in range(len(nums)):
     if nums[i] > max_num:
         max_num = nums[i]
-        count = i
-print(f'Максимальные число: {max_num} под номером: {count+1}')
+print(f'Максимальные число: {max_num}')
 
 ##
 

@@ -11,6 +11,13 @@ print(i+1)
 ##
 
 n_num = int(input("N: "))
+for i in range(n_num*2):
+    print(-n_num+i, end=", ")
+print(n_num+1)
+
+##
+
+n_num = int(input("N: "))
 n_str = ''
 for i in range(-n_num, n_num+1):
     n_str += n_str(i) + ', '
