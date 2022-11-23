@@ -27,7 +27,7 @@ else: print("Это не день недели")
 for x in (True,False): # можно использовать (1,0)
     for y in (True,False):
         for z in (True,False):
-            print(x,', ',y,', ',z,'=', not(x or y or z) == (not x) and (not y) and (not z))
+            print('x: ',x,', y: ',y,', z: ',z,'=', not(x or y or z) == (not x) and (not y) and (not z))
 
 
 # 3- Напишите программу, которая принимает на вход координаты точки
