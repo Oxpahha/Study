@@ -7,3 +7,10 @@ for i in range(n_num-1):
     print((-3)**i, end=', ')
 print((-3)**(n_num-1))
 
+#
+
+num = int(input('N: '))
+res = 1
+for i in range(1, num+1):
+    print (res,end=' ')
+    res*= -3
