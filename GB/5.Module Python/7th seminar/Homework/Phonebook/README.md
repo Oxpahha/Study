@@ -10,4 +10,4 @@
 
 # Блок схема
 
-<img src="https://github.com/Oxpahha/Study/blob/main/GB/5.Module%20Python/7th%20seminar/Homework/Phonebook/map.png?raw=true" alt="MindMap" style="width:250px;"/>
+<img src="https://github.com/Oxpahha/Study/blob/main/GB/5.Module%20Python/7th%20seminar/Homework/Phonebook/map.png?raw=true" alt="MindMap" style="width:450px;"/>
