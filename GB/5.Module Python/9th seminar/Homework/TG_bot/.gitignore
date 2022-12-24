@@ -1,4 +1,4 @@
 .gitignore
 .venv
 .env
-logs.csv
+logs.*
