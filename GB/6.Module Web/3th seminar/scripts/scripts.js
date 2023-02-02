@@ -34,8 +34,7 @@ function named() {
     let name = prompt('Whats ur name?', 'Anon');
     if (name) {
         alert(`Hello, ${name}`);
-    }
-    else {
+    } else {
         alert('Ok. No names');
     }
 
