@@ -15,7 +15,7 @@ function ageCheck() {
         alert('Мы не знаем что Вам делать');
     }
 
-        // switch (age) {
+    // switch (age) {
     //     case 18:
     //         alert('Вы совершеннолетний, все можно!');
     //         break;
@@ -30,7 +30,13 @@ function ageCheck() {
     //         break;
     // }
 }
-function named(){
-    let name = prompt('Whats ur name?');
-    alert(`Hello, ${name}`)
+function named() {
+    let name = prompt('Whats ur name?', 'Anon');
+    if (name) {
+        alert(`Hello, ${name}`);
+    }
+    else {
+        alert('Ok. No names');
+    }
+
 }
