@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+div{
+    display: block;
+}
+body {
+    background-color: #ccc;
+}
+.container {
+    width: 1100px;
+    margin: 0 auto;
+
+} 
+.title, .desc {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+.title {
+    color: gray;
+}
+h2 {
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+}
+.nav {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-link {
+    text-decoration: none;
+    padding: 10px;
+    background-color: gray;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+}
+.nav-link:hover{
+    background-color: #fff;
+    color: black;
+
+}
+.item {
+    width: 240px;
+    margin-bottom: 50px;
+}
+.item-pic {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.item-link {
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.item-page {
+    margin-top: 50px;
+}
+.item-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-inline: 100px;
+    margin-top: 50px;
+}
+.item-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+}
+.discr {
+    display: inline;
+    float: left;
+    padding-left: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 360px;
+    width: 100%;
+}
+.text-box {
+    font-size: 15px;
+    line-height: 1.55;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+.pros-list {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 1.55;
+}
+.item-page-image {
+    max-width: 560px;
+    float: right;
+    margin-right: 120px;
+    padding-top: 4px;
+    padding-bottom: 10px;
+}
+#d1 {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    font-size: 15px;
+    line-height: 1.55;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}

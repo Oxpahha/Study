@@ -1,3 +1,0 @@
-import controller
-
-controller.main()
