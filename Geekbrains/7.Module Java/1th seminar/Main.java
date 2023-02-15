@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        taskFour();
+        taskFive();
 
     }
 
@@ -143,14 +143,7 @@ public class Main {
         Напишите метод, который находит самую длинную строку общего префикса среди массива строк.
         Если общего префикса нет, вернуть пустую строку ""
          */
-        String str = "Добро пожаловать на курс по Java";
-        System.out.println(str);
-        String[] strArr = str.split(" ");
-        String res = "";
-        for (int i = strArr.length-1; i >= 0; i--) {
-            res += strArr[i] + " ";
-        }
-        System.out.println(res);
+
     }
     static void taskFive() {
         /*
@@ -166,7 +159,5 @@ public class Main {
         }
         System.out.println(res);
     }
-
-
 }
 
