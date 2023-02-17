@@ -60,13 +60,23 @@ public class HomeWork {
             System.out.print("Enter operator: ");
             operator = scanner.nextLine();
         }
+        boolean flag = firstNumber % 1 == 0;
+        String form = "";
+        String reform = "";
+        if (flag) {
+            form = "%1$.0f%3$s%2$d=";
+            reform = "%1$.2f";
+        } else {
+            form = "%1$.3f%3$s%2$d=";
+            reform = "%1$.3f";
+        }
 
-        System.out.printf("%1$.0f%3$s%2$d=",firstNumber,secondNumber,operator);
+        System.out.printf(form,firstNumber,secondNumber,operator);
         switch (operator) {
-            case "+" -> System.out.printf("%1$.2f",firstNumber + secondNumber);
-            case "-" -> System.out.printf("%1$.2f",firstNumber - secondNumber);
-            case "/" -> System.out.printf("%1$.2f",firstNumber / secondNumber);
-            case "*" -> System.out.printf("%1$.2f",firstNumber * secondNumber);
+            case "+" -> System.out.printf(reform,firstNumber + secondNumber);
+            case "-" -> System.out.printf(reform,firstNumber - secondNumber);
+            case "/" -> System.out.printf(reform,firstNumber / secondNumber);
+            case "*" -> System.out.printf(reform,firstNumber * secondNumber);
             default -> System.out.println("Не понимаю что ты хочешь.");
         }
     }
