@@ -2,8 +2,8 @@
 
 ## О проекте
  Claybot это чатбот для Telegram выполненый в целях практики написания документации и тестирования на реальных проектах. 
- * [Техническое задание](null)
- * [Таблица состояний и переходов](null)    
+ * [Техническое задание](https://github.com/Oxpahha/Study/blob/main/QualityAssurance/_Pet-Claybot/Technical%20Specification/Claybot.v03.doc)
+ * [Таблица состояний и переходов](https://github.com/Oxpahha/Study/blob/main/QualityAssurance/_Pet-Claybot/S%26T/Claybot.v3.drawio.png)    
  * Тестовый план    
  * Код
  * Тестовые сценарии
