@@ -53,30 +53,25 @@ public class HomeWork {
         int secondNumber;
         String operator;
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Enter first number: ");
-            firstNumber = Double.parseDouble(scanner.nextLine());
-            System.out.print("Enter second number: ");
-            secondNumber = Integer.parseInt(scanner.nextLine());
-            System.out.print("Enter operator: ");
-            operator = scanner.nextLine();
-        }
-        boolean flag = firstNumber % 1 == 0;
-        String form = "";
-        String reform = "";
-        if (flag) {
-            form = "%1$.0f%3$s%2$d=";
-            reform = "%1$.2f";
-        } else {
-            form = "%1$.3f%3$s%2$d=";
-            reform = "%1$.3f";
+            System.out.print("Введите выражение. Например: 2 + 2\n");
+            firstNumber = scanner.nextDouble();
+            operator = scanner.next();
+            secondNumber = scanner.nextInt();
         }
 
-        System.out.printf(form,firstNumber,secondNumber,operator);
+
+        System.out.printf("%1$.0f %3$s %2$d = ",firstNumber,secondNumber,operator);
         switch (operator) {
-            case "+" -> System.out.printf(reform,firstNumber + secondNumber);
-            case "-" -> System.out.printf(reform,firstNumber - secondNumber);
-            case "/" -> System.out.printf(reform,firstNumber / secondNumber);
-            case "*" -> System.out.printf(reform,firstNumber * secondNumber);
+            case "+" -> System.out.println(firstNumber + secondNumber);
+            case "-" -> System.out.println(firstNumber - secondNumber);
+            case "/" -> {
+                String form = "%1$.0f";
+                double res = firstNumber / secondNumber;
+                if (res % 1 != 0) {
+                    form = "%1$.2f";}
+                System.out.printf(form, res);
+            }
+            case "*" -> System.out.println(firstNumber * secondNumber);
             default -> System.out.println("Не понимаю что ты хочешь.");
         }
     }
