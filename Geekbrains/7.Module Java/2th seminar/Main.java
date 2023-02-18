@@ -93,12 +93,39 @@ public class Main {
         return String.valueOf(str).repeat(Math.max(0, n));
     }
     static void wrtTxt(String str, String filePath){
+
+        Logger logger = Logger.getAnonymousLogger();
+        SimpleFormatter simpleFormatter = new SimpleFormatter();
+        FileHandler fileHandler = null;
+
+        logger.log(Level.INFO, "Записываю в файл");
+        try {
+            fileHandler = new FileHandler("taskFourLogger.txt");
+            fileHandler.setFormatter(simpleFormatter);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        logger.addHandler(fileHandler);
+
         try (FileWriter fileWriter = new FileWriter(filePath, true)) {
             fileWriter.write(str);
         } catch (Exception e) {
+            logger.log(Level.WARNING, e.getMessage());
             e.printStackTrace();
         }
     }
-
+    static String readFileP(String filePath){
+        File file = new File(filePath);
+        StringBuilder stringBuilder = new StringBuilder();
+        try (Scanner scanner = new Scanner(file)){
+            while (scanner.hasNext()){
+                stringBuilder.append(scanner.nextLine());
+                stringBuilder.append("\n");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stringBuilder.toString();
+    }
 
 }
