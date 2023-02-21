@@ -8,7 +8,9 @@ public class HomeWork {
         return random.nextInt(from, to);
     }
     static void semThreeTaskOneHW() {
-
+        /*
+        1. Реализовать алгоритм сортировки слиянием
+        */
         ArrayList<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < Randommo(8, 9); i++) {
