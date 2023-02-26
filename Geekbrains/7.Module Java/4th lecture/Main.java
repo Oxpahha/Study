@@ -4,6 +4,9 @@ import java.util.*;
 import java.util.logging.*;
 
 public class Main {
+    public static void main(String[] args) {
+        
+    }
     
     static void lecFourTaskOne_List(){
         LinkedList<Integer> linkedList = new LinkedList<Integer>();
