@@ -1,6 +1,10 @@
+import java.io.FileWriter;
+import java.util.*;
+import java.util.logging.*;
+
 public class HomeWork {
     public static void main(String[] args) {
-
+        semFourTaskTwoHW();
     }
     static void semFourTaskOneHW() {
         /*
@@ -134,6 +138,18 @@ public class HomeWork {
             }
         } catch (Exception e) {
             wrtTxt(Arrays.toString(new Exception[]{e}), path);
+        }
+    }
+    static void wrtTxt(String str, String filePath) {
+
+        Logger logger = Logger.getAnonymousLogger();
+
+        try (FileWriter fileWriter = new FileWriter(filePath, true)) {
+            fileWriter.write(str);
+            fileWriter.write("\n");
+        } catch (Exception e) {
+            logger.log(Level.WARNING, e.getMessage());
+            e.printStackTrace();
         }
     }
 }
