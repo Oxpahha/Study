@@ -19,7 +19,7 @@ import java.util.*;
     2. Отфильтровать ноутбуки их первоначального множества и
        вывести проходящие по условиям.
      */
-public class LastHW {
+public class HomeWork {
     public static void main(String[] args) {
         Set<Notebook> notebooks = new HashSet<Notebook>();
 
