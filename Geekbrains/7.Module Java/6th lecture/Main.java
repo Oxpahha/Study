@@ -6,7 +6,7 @@ public class Main {
         
     }
 
-    static void semSixTaskOne_HashSet(){
+    static void lecSixTaskOne_HashSet(){
         Set<Integer> set = new HashSet<>();
         set.add(1);
         set.add(12);
@@ -28,7 +28,7 @@ public class Main {
         System.out.println();
         System.out.println(set); // []
     }
-    static void semSixTaskTwo_MathSet(){
+    static void lecSixTaskTwo_MathSet(){
         var a = new HashSet<>(Arrays.asList(1,2,3,4,5,6,7));
         var b = new HashSet<>(Arrays.asList(2,3,5,7,11,13,17));
         var u = new HashSet<Integer>(a);
@@ -45,7 +45,7 @@ public class Main {
 
         boolean res = a.addAll(b);
     }
-    static void semSixTaskThree_Class(){
+    static void lecSixTaskThree_Class(){
         Worker w1 = new Worker();
         w1.firstName = "NameOne";
         w1.lastName = "lastNameOne";
