@@ -4,7 +4,7 @@ import java.util.logging.*;
 
 public class HomeWork {
     public static void main(String[] args) {
-        semFourTaskTwoHW();
+        semFourTaskThreeHW();
     }
     static void semFourTaskOneHW() {
         /*
@@ -56,7 +56,7 @@ public class HomeWork {
         3. В калькулятор добавьте возможность отменить последнюю операцию.
         */
         String path = "semTwoTaskTwoHW.txt";
-        double firstNumber = -1;
+        int firstNumber = -1;
         int secondNumber = -1;
         String operator = "";
 
@@ -66,7 +66,7 @@ public class HomeWork {
                 switch (i) {
                     case 0:
                         System.out.println("Первый операнд:");
-                        firstNumber = scanner.nextDouble();
+                        firstNumber = scanner.nextInt();
                         wrtTxt("First input: " + firstNumber, path);
                         break;
                     case 1:
@@ -95,21 +95,21 @@ public class HomeWork {
                     case 3:
                         if (firstNumber != -1 && secondNumber != -1) {
                             try {
-                                System.out.printf("%1$.0f %3$s %2$d = ", firstNumber, secondNumber, operator);
+                                System.out.printf("%1$d %3$s %2$d = ", firstNumber, secondNumber, operator);
                                 switch (operator) {
                                     case "+" -> {
-                                        double res = firstNumber + secondNumber;
-                                        System.out.printf("%1$.0f", res);
+                                        int res = firstNumber + secondNumber;
+                                        System.out.print(res);
                                         wrtTxt("Result: " + res, path);
                                     }
                                     case "-" -> {
-                                        double res = firstNumber - secondNumber;
-                                        System.out.printf("%1$.0f", res);
+                                        int res = firstNumber - secondNumber;
+                                        System.out.print(res);
                                         wrtTxt("Result: " + res, path);
                                     }
                                     case "/" -> {
                                         String form = "%1$.0f";
-                                        double res = firstNumber / secondNumber;
+                                        double res = (firstNumber*1.0) / secondNumber;
                                         if (res % 1 != 0) {
                                             form = "%1$.2f";
                                         }
@@ -117,8 +117,8 @@ public class HomeWork {
                                         wrtTxt("Result: " + res, path);
                                     }
                                     case "*" -> {
-                                        double res = firstNumber * secondNumber;
-                                        System.out.printf("%1$.0f", res);
+                                        int res = firstNumber * secondNumber;
+                                        System.out.print(res);
                                         wrtTxt("Result: " + res, path);
                                     }
                                     default -> {
