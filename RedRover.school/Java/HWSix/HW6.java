@@ -1,6 +1,6 @@
 public class HW6 {
     public static void main(String[] args) {
-        TaskExtra();
+        TaskSeven();
     }
 
     static void TaskOne() {
@@ -56,7 +56,7 @@ public class HW6 {
 //    необходимо вывести среднее арифметическое всех значений массива.
 
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9}; // 5
-        int sum = 0;
+        double sum = 0;
         for (int i : array) {
             sum += i;
         }
@@ -102,16 +102,14 @@ public class HW6 {
 //    int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}};
 //    необходимо вывести количество элементов в массиве.
 
-        int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}}; //-6
-        int minNumber = array[0][0];
+        int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}}; // 15
+        int count = 0; 
         for (int[] i : array) {
             for (int j : i) {
-                if (j < minNumber) {
-                    minNumber = j;
-                }
+                count++; 
             }
         }
-        System.out.println(minNumber);
+        System.out.println(count);
     }
     static void TaskEight() {
 //    Задача №8

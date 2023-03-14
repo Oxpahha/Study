@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "RedRover.school/Java/lecFour",
         "Geekbrains/7.Module Java/4th seminar",
         "Geekbrains/7.Module Java/1th seminar",
         "Geekbrains/7.Module Java/1th lecture",
-        "RedRover.school/Java/lecFour"
+        "RedRover.school/Java/HWSix"
     ]
 }
