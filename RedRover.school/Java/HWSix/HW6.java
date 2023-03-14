@@ -1,6 +1,6 @@
 public class HW6 {
     public static void main(String[] args) {
-        TaskSeven();
+        TaskExtra();
     }
 
     static void TaskOne() {
@@ -112,6 +112,7 @@ public class HW6 {
         System.out.println(count1);
 
         // Или
+
         int count2 = 0;
         for (int[] i : array) {
                 count2+= i.length; 
@@ -129,7 +130,7 @@ public class HW6 {
         String s = "Перестановочный алгоритм быстрого действия";
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == 'о') {
-                System.out.print("o");
+                System.out.print(s.charAt(i));
             }
         }
     }
@@ -144,7 +145,7 @@ public class HW6 {
         String s = "Перевыборы выбранного президента";
         int count = 0;
         for (int i = 0; i < s.length(); i++) {
-            if (s.toLowerCase().charAt(i) == 'е') {
+            if (s.charAt(i) == 'е') {
                 count++;
             }
         }
@@ -174,6 +175,21 @@ public class HW6 {
                 }
             }
         }
+        // 
+        System.out.println();
+
+        // Или
+
+        String s1 = "Посмотрите как Рите нравится ритм";
+        String word1 = "рит";
+
+        s1 = s1.toLowerCase();
+        int index = s1.indexOf(word);
+
+        while(index != -1){
+            System.out.print(index + " ");
+            index = s1.indexOf(word,index+1);
+        }
     }
 
     static void TaskExtra() {
@@ -189,7 +205,7 @@ public class HW6 {
         for (String[] i : array) {
             for (String j : i) {
                 for (int k = 0; k < j.length(); k++) {
-                    if (j.toLowerCase().charAt(k) == ch) {
+                    if (j.charAt(k) == ch) {
                         flag = false;
                         break;
                     }
@@ -200,8 +216,21 @@ public class HW6 {
                 flag = true;
             }
         }
-        System.out.print(count);
+        System.out.println(count);
+
+        // или
+
+        String[][] array1 = {{"Привет", "всем", "кто"}, {"изучает", "язык", "программирования"}, {"java"}};
+        int count1 = 0;
+        char ch1 = 'е';
+
+        for (String[] i : array1) {
+            for (String j : i) {
+                if (j.indexOf(ch1) == -1) {
+                    count1++;
+                }
+            }       
+        }
+        System.out.println(count1);
     }
 }
-
-
