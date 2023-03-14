@@ -103,13 +103,21 @@ public class HW6 {
 //    необходимо вывести количество элементов в массиве.
 
         int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}}; // 15
-        int count = 0; 
+        int count1 = 0; 
         for (int[] i : array) {
             for (int j : i) {
-                count++; 
+                count1++; 
             }
         }
-        System.out.println(count);
+        System.out.println(count1);
+
+        // Или
+        int count2 = 0;
+        for (int[] i : array) {
+                count2+= i.length; 
+            }
+        System.out.println(count2);    
+
     }
     static void TaskEight() {
 //    Задача №8
