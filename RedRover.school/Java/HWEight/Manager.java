@@ -1,21 +1,5 @@
-public class Manager extends Employee {
-    private int workerCount;
-    private int employeeRate = 3;
+public class Manager extends BaseManager {
 
-    public int getNumberOfSubordinates() {
-        return workerCount;
-    }
-    public void setNumberOfSubordinates(int workerCount) {
-        this.workerCount = workerCount;
-    }
-
-    public int getWorkerCount() {
-        return workerCount;
-    }
-
-    public void setWorkerCount(int workerCount) {
-        this.workerCount = workerCount;
-    }
 
     @Override
     public double getSalary(int days) {
@@ -23,8 +7,8 @@ public class Manager extends Employee {
     }
 
     public double getSalaryManager() {
-        if(workerCount!=0){
-            return (getBaseSalary()/100*employeeRate)*workerCount;
+        if(getWorkerCount()!=0){
+            return (getBaseSalary()/100*3)*getWorkerCount();
         }
         return getBaseSalary();
     }

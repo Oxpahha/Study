@@ -1,4 +1,4 @@
-public class Main {
+public class HW8 {
     public static void main(String[] args) {
         HW();
     }
@@ -44,6 +44,7 @@ public class Main {
         luke.setGender(0);
         luke.setBaseSalary(150);
         luke.setNumberOfSubordinates(16);
+
 
         System.out.println(luke.getFullName());
 

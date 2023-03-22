@@ -1,5 +1,4 @@
-public class Director extends Manager{
-    private int employeeRate = 9;
+public class Director extends BaseManager{
 
     @Override
     public double getSalary(int days) {
@@ -8,7 +7,7 @@ public class Director extends Manager{
 
     public double getSalaryDirector() {
         if(getWorkerCount()!=0){
-            return (getBaseSalary()/100*employeeRate)*getWorkerCount();
+            return (getBaseSalary()/100*9)*getWorkerCount();
         }
         return getBaseSalary();
     }
