@@ -6,6 +6,7 @@ package org.redrover;
 //        Скопировать или создать заново код из предыдущей домашней работы (8.2) в src/main/java ветку.
 //        создать тесты для методов класса EmployeeUtils
 
+import helpers.Generate;
 import helpers.Storage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -16,7 +17,7 @@ public class EmpTest {
     // Генерация тестовых данных.
     @BeforeTest
     public void generateData(){
-        Storage.generationEmpTestData();
+        Generate.generationEmpTestData();
     }
 
     // Тесты
