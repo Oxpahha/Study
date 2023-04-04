@@ -20,7 +20,9 @@ public class EmpTest {
     public void generateData(){
         Generate.generationEmpTestData();
     }
-	    @AfterTest
+    
+    // Очистка тестовых данных.
+    @AfterTest
     public void clearData(){
         Storage.clearEmpTest();
     }
