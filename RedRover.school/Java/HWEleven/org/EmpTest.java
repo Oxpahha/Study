@@ -20,6 +20,10 @@ public class EmpTest {
     public void generateData(){
         Generate.generationEmpTestData();
     }
+	    @AfterTest
+    public void clearData(){
+        Storage.clearEmpTest();
+    }
 
     // Тесты
     @Test
@@ -55,8 +59,5 @@ public class EmpTest {
         Assert.assertEquals(EmpUtilities.findMaxSubsForManagers(Storage.managerArray),15);
     }
 
-    @AfterTest
-    public void clearData(){
-        Storage.clearEmpTest();
-    }
+
 }
