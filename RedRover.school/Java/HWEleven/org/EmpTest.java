@@ -9,6 +9,7 @@ package org.redrover;
 import helpers.Generate;
 import helpers.Storage;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,11 +24,11 @@ public class EmpTest {
     // Тесты
     @Test
     public void testFindEmployee(){
-        Assert.assertEquals(EmpUtilities.findEmployee(Storage.empArray, "Jake Broock"), Storage.jake);
+        Assert.assertEquals(EmpUtilities.findEmployee(Storage.empArray, "Jake Broock"), Storage.one);
     }
     @Test
     public void testFindEmployeeForNamePart(){
-        Assert.assertEquals(EmpUtilities.findEmployeeForNamePart(Storage.empArray, "Billy"),Storage.bill);
+        Assert.assertEquals(EmpUtilities.findEmployeeForNamePart(Storage.empArray, "Billy"),Storage.three);
     }
     @Test
     public void testCalculateAllSalary(){
@@ -52,5 +53,10 @@ public class EmpTest {
     @Test
     void testFindMaxSubsForManagers(){
         Assert.assertEquals(EmpUtilities.findMaxSubsForManagers(Storage.managerArray),15);
+    }
+
+    @AfterTest
+    public void clearData(){
+        Storage.clearEmpTest();
     }
 }
