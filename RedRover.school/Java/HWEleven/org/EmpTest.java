@@ -20,7 +20,7 @@ public class EmpTest {
     public void generateData(){
         Generate.generationEmpTestData();
     }
-    
+
     // Очистка тестовых данных.
     @AfterTest
     public void clearData(){
@@ -31,35 +31,43 @@ public class EmpTest {
     @Test
     public void testFindEmployee(){
         Assert.assertEquals(EmpUtilities.findEmployee(Storage.empArray, "Jake Broock"), Storage.one);
+        Assert.assertNull(EmpUtilities.findEmployee(Storage.empArray, "Sam"));
     }
     @Test
     public void testFindEmployeeForNamePart(){
         Assert.assertEquals(EmpUtilities.findEmployeeForNamePart(Storage.empArray, "Billy"),Storage.three);
+        Assert.assertNull(EmpUtilities.findEmployeeForNamePart(Storage.empArray, "Kenny"));
     }
     @Test
     public void testCalculateAllSalary(){
         Assert.assertEquals(EmpUtilities.calculateAllSalary(Storage.empArray, 10), 3310.0);
+        Assert.assertEquals(EmpUtilities.calculateAllSalary(Storage.emptyEmpArray, 10), 0);
+
     }
     @Test
     void testFindLowestSalary(){
         Assert.assertEquals(EmpUtilities.findLowestSalary(Storage.empArray, 10), 500.0);
+        Assert.assertEquals(EmpUtilities.findLowestSalary(Storage.emptyEmpArray, 10), 0);
     }
     @Test
     void testFindMaxSalary(){
         Assert.assertEquals(EmpUtilities.findMaxSalary(Storage.empArray,10),1450.0);
+        Assert.assertEquals(EmpUtilities.findLowestSalary(Storage.emptyEmpArray, 10), 0);
     }
     @Test
     void testFindMinBonusForManagers(){
         Assert.assertEquals(EmpUtilities.findMaxSubsForManagers(Storage.managerArray),15.0);
+        Assert.assertEquals(EmpUtilities.findMaxSubsForManagers(Storage.emptyManagerArray),0);
     }
     @Test
     void testFindMaxBonusForManagers(){
         Assert.assertEquals(EmpUtilities.findMaxBonusForManagers(Storage.managerArray),45.0);
+        Assert.assertEquals(EmpUtilities.findMaxBonusForManagers(Storage.emptyManagerArray),0);
     }
     @Test
     void testFindMaxSubsForManagers(){
         Assert.assertEquals(EmpUtilities.findMaxSubsForManagers(Storage.managerArray),15);
+        Assert.assertEquals(EmpUtilities.findMaxSubsForManagers(Storage.emptyManagerArray),0);
     }
-
 
 }

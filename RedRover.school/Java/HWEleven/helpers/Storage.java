@@ -8,7 +8,9 @@ public class Storage {
     public static Object two;
     public static Object three;
     public static Employee[] empArray;
+    public static Employee[] emptyEmpArray;
     public static Manager[] managerArray;
+    public static Manager[] emptyManagerArray;
 
     public static void clearEmpTest() {
         Storage.one = null;

@@ -26,7 +26,7 @@ public class Generate {
         bill.setBaseSalary(50);
         Storage.three = bill;
 
-        Storage.empArray = new Employee[]{jake, john, bill};
+        Storage.empArray = new Employee[]{jake, john, bill,null};
         Storage.managerArray = new Manager[]{jake, john};
     }
 }
