@@ -1,20 +1,20 @@
 package api;
-import java.util.List;
-import java.util.stream.Collectors;
 
-import io.restassured.http.ContentType;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.List;
+
 import static io.restassured.RestAssured.given;
 
 public class RegressTest {
     private final static String URL = "https://reqres.in";
     @Test
-    public void checkTest(){
+    public void GetTest(){
+        Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
         List<UserData> users = given()
                 .when()
-                .contentType(ContentType.JSON)
-                .get(URL+"/api/users?page=2")
+                .get("/api/users?page=2")
                 .then().log().all()
                 .extract().body().jsonPath().getList("data", UserData.class);
 
@@ -28,5 +28,37 @@ public class RegressTest {
         for (int i = 0; i < avatars.size(); i++) {
             Assert.assertTrue(avatars.get(i).contains(ids.get(i)));
         }
+    }
+    @Test
+    public void PostTestSuccessReg(){
+        Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
+        Integer id = 4;
+        String token = "QpwL5tke4Pnpja7X4";
+        Register user = new Register("eve.holt@reqres.in","pistol");
+        SuccessReg successReg = given()
+                .body(user)
+                .when()
+                .post("/api/register")
+                .then().log().all()
+                .extract().as(SuccessReg.class);
+
+        Assert.assertNotNull(successReg.getId());
+        Assert.assertNotNull(successReg.getToken());
+
+        Assert.assertEquals(id, successReg.getId());
+        Assert.assertEquals(token, successReg.getToken());
+    }
+
+    @Test
+    public void PostTestUnSuccessReg(){
+        Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec400Error());
+        Register user = new Register("sydney@fife","");
+        UnSuccessReg unSuccessReg = given()
+                .body(user)
+                .post("/api/register")
+                .then().log().all()
+                .extract().as(UnSuccessReg.class);
+
+        Assert.assertEquals("Missing password",unSuccessReg.getError());
     }
 }
