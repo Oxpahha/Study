@@ -7,7 +7,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 
-
 public class RegressTest {
     private final static String URL = "https://reqres.in";
     @Test
