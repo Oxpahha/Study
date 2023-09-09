@@ -60,7 +60,6 @@ public class RegressTest {
         Assert.assertEquals(id, successReg.getId());
         Assert.assertEquals(token, successReg.getToken());
     }
-
     @Test
     public void PostUnSuccessRegTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec400Error());

@@ -9,5 +9,15 @@
         <module name="API_AQA" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="allure-junit4-maven" target="1.8" />
+      <module name="junit5-allure-report" target="11" />
+      <module name="projectM-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="projectM-web" options="-parameters" />
+    </option>
   </component>
 </project>
