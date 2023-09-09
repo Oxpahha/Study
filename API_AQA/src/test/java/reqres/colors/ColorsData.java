@@ -1,4 +1,6 @@
-package api;
+package reqres.colors;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
 
 public class ColorsData {
     private Integer id;
@@ -7,6 +9,8 @@ public class ColorsData {
     private String color;
     private String pantone_value;
 
+    @JsonCreator
+    public ColorsData(){}
     public ColorsData(Integer id, String name, Integer year, String color, String pantone_value) {
         this.id = id;
         this.name = name;

@@ -1,11 +1,19 @@
-package api;
+package reqres;
 
+import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.Assert;
 import org.junit.Test;
+import reqres.colors.ColorsData;
+import reqres.registration.Register;
+import reqres.registration.SuccessReg;
+import reqres.registration.UnSuccessReg;
+import reqres.spec.Specifications;
+import reqres.user.UserData;
+import reqres.user.UserTime;
+import reqres.user.UserTimeResponse;
 
 import java.time.Clock;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 
@@ -37,11 +45,13 @@ public class RegressTest {
         Integer id = 4;
         String token = "QpwL5tke4Pnpja7X4";
         Register user = new Register("eve.holt@reqres.in","pistol");
+
         SuccessReg successReg = given()
                 .body(user)
                 .when()
                 .post("/api/register")
                 .then().log().all()
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("reqressSuccessRegSchema.json"))
                 .extract().as(SuccessReg.class);
 
         Assert.assertNotNull(successReg.getId());
@@ -63,7 +73,6 @@ public class RegressTest {
 
         Assert.assertEquals("Missing password",unSuccessReg.getError());
     }
-
     @Test
     public void GetColorsSortedByYearsTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
@@ -79,7 +88,6 @@ public class RegressTest {
         Assert.assertEquals(sortedYears,years);
 
     }
-
     @Test
     public void DeleteUserTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpecUniq(204));
@@ -88,7 +96,6 @@ public class RegressTest {
                 .delete("/api/users/2")
                 .then().log().all();
     }
-
     @Test
     public void timeUserTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());

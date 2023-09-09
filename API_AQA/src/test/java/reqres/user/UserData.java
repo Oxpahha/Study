@@ -1,4 +1,4 @@
-package api;
+package reqres.user;
 
 public class UserData {
 
