@@ -3,6 +3,7 @@ package api;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.Clock;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -88,4 +89,24 @@ public class RegressTest {
                 .then().log().all();
     }
 
+    @Test
+    public void timeUserTest(){
+        Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
+        UserTime user = new UserTime("morpheus","zion resident");
+        UserTimeResponse response = given()
+                .body(user)
+                .when()
+                .put("/api/users/2")
+                .then().log().all()
+                .extract().as(UserTimeResponse.class);
+
+        String regexSys = "(.{12})$";
+        String regexRes = "(.{6})$";
+
+        String currentTime = Clock.systemUTC().instant().toString().replaceAll(regexSys,"");
+        String responseTime = response.getUpdatedAt().replaceAll(regexRes,"");
+
+        Assert.assertEquals(currentTime,responseTime);
+
+    }
 }
