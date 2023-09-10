@@ -1,5 +1,6 @@
 package reqres;
 
+import com.google.gson.JsonObject;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,18 +8,22 @@ import reqres.colors.ColorsData;
 import reqres.registration.Register;
 import reqres.registration.SuccessReg;
 import reqres.registration.UnSuccessReg;
-import reqres.spec.Specifications;
+
 import reqres.user.UserData;
 import reqres.user.UserTime;
 import reqres.user.UserTimeResponse;
 
+import java.io.IOException;
 import java.time.Clock;
 import java.util.List;
-
 import static io.restassured.RestAssured.given;
+import spec.JsonFileDownloader;
+import spec.Specifications;
 
 public class RegressTest {
     private final static String URL = "https://reqres.in";
+    private final static String SchemaLOCAL = "schema.json";
+
     @Test
     public void GetTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
@@ -40,7 +45,11 @@ public class RegressTest {
         }
     }
     @Test
-    public void PostSuccessRegTest(){
+    public void PostSuccessRegTest() throws IOException {
+
+        JsonFileDownloader.fileUrl = "https://drive.google.com/uc?id=189Z9dHhzQkS3BwwkGQ2UGvSGBAMn1JQT&export=download";
+        JsonFileDownloader.run();
+
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
         Integer id = 4;
         String token = "QpwL5tke4Pnpja7X4";
@@ -51,7 +60,7 @@ public class RegressTest {
                 .when()
                 .post("/api/register")
                 .then().log().all()
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("reqressSuccessRegSchema.json"))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(SchemaLOCAL))
                 .extract().as(SuccessReg.class);
 
         Assert.assertNotNull(successReg.getId());
