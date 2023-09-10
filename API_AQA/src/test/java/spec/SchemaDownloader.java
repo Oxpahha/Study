@@ -8,7 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
-public class JsonFileDownloader {
+public class SchemaDownloader {
     public static String fileUrl;
     public static String localFilePath ="C:\\Users\\User\\Documents\\GIT\\Study\\API_AQA\\src\\test\\resources\\schema.json"; // Путь и имя локального файла, куда сохранить
 
@@ -16,7 +16,7 @@ public class JsonFileDownloader {
         return fileUrl;
     }
     public void setFileUrl(String fileUrl) {
-        JsonFileDownloader.fileUrl = fileUrl;
+        SchemaDownloader.fileUrl = fileUrl;
     }
 
     public static void run() {

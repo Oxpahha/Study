@@ -1,6 +1,5 @@
 package reqres;
 
-import com.google.gson.JsonObject;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,6 +8,7 @@ import reqres.registration.Register;
 import reqres.registration.SuccessReg;
 import reqres.registration.UnSuccessReg;
 
+import reqres.user.OtherRequest;
 import reqres.user.UserData;
 import reqres.user.UserTime;
 import reqres.user.UserTimeResponse;
@@ -17,13 +17,13 @@ import java.io.IOException;
 import java.time.Clock;
 import java.util.List;
 import static io.restassured.RestAssured.given;
-import spec.JsonFileDownloader;
+import spec.SchemaDownloader;
 import spec.Specifications;
 
 public class RegressTest {
     private final static String URL = "https://reqres.in";
     private final static String SchemaLOCAL = "schema.json";
-
+    private static final OtherRequest requestData = new OtherRequest();
     @Test
     public void GetTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
@@ -45,10 +45,10 @@ public class RegressTest {
         }
     }
     @Test
-    public void PostSuccessRegTest() throws IOException {
+    public void PostSuccessRegTest() {
 
-        JsonFileDownloader.fileUrl = "https://drive.google.com/uc?id=189Z9dHhzQkS3BwwkGQ2UGvSGBAMn1JQT&export=download";
-        JsonFileDownloader.run();
+        SchemaDownloader.fileUrl = "https://drive.google.com/uc?id=189Z9dHhzQkS3BwwkGQ2UGvSGBAMn1JQT&export=download";
+        SchemaDownloader.run();
 
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec200OK());
         Integer id = 4;
@@ -68,7 +68,27 @@ public class RegressTest {
 
         Assert.assertEquals(id, successReg.getId());
         Assert.assertEquals(token, successReg.getToken());
+
+        try {
+            requestData.setName("Bob");
+            requestData.setUniqId(successReg.getId());
+            requestData.setRegistrationToken(successReg.getToken());
+            requestData.setDate("10-09-23");
+            System.out.println("requestData сохранен.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Не удалось сохранить requestData");
+        }
+
     }
+    @Test
+    public void OtherRequestTest(){
+        System.out.println(requestData.getName());
+        System.out.println(requestData.getRegistrationToken());
+        System.out.println(requestData.getUniqId());
+        System.out.println(requestData.getDate());
+    }
+
     @Test
     public void PostUnSuccessRegTest(){
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpec400Error());
